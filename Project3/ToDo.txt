@@ -1,0 +1,17 @@
+﻿D-move to SQLite \*before*\ while adding save-load system 
+D--Convert access DB to SQLite
+1-save-load system
+D--save portion
+1--load portion
+1---add a load method to classes to load information in
+D-standardize result codes
+D-fix the broken ass location bugs instead of doing a workaround Y DID I NOT FIGURE THIS OUT SOONER
+D--ideas
+D---different color code for obvious next map versis teleporting to a new location
+D---edge of the map stuff automatically linking for manual code reduction
+4-change the casting system so magic users target magic defense, or change the damage system. basic magic attack hits magic defense. weapon determines magic damage or physical.
+5-add a target check into spells, disable attacking friendlies
+6-merge buy-sell screen into 1 screen, not using the inventory screen as the sell screen anymore.
+7-rebuild inventory system to be more robust and not have it auto insert. add a stack button, sort button ect.
+8-sounds
+unknown-change from picture boxes to something better

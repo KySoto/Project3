@@ -1,0 +1,5 @@
+filename layout
+ex 020102.png
+02 forest zone
+01 area x cord
+02 area y cord

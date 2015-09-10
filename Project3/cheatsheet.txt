@@ -1,0 +1,74 @@
+﻿image direction codes
+0 North
+1 West
+2 East
+3 South
+
+cordinate system
+zone,areax,areay,x,y
+example (area and on screen. zone is "linear")
+0,0:1,0:2,0
+0,1:1,1:2,1
+0,2:1,2:2,2
+
+movement grid codes
+0:		open free space - no color
+1:      pathing block - red - Color.FromArgb(237, 28, 36)
+2:      teleport square - purple - Color.FromArgb(163, 73, 164)
+3:      NPC square - blueish - Color.FromArgb(0, 162, 232)
+4:      monster -N / A
+5:      player -N / A
+6:      auto teleport square- yellow - Color.FromArgb(255, 242, 0)
+7:      destination - green - Color.FromArgb(34, 177, 76)
+Move Result Codes
+-1 failure to move
+0 successful movement
+1 battle
+2 talk
+3 teleport
+4 load
+
+save-load codes
+0 success
+1 success new file created
+2 failure file not found
+3 failure file permissions
+
+save database structure
+-table "party"
+-collum "slot" integer PRIMARY KEY
+-collum "name" string
+-collum "class" integer
+-collum "exp" double
+-collum "level" integer
+-collum "maxhp" double
+-collum "currenthp" double
+-collum "maxmp" double
+-collum "currentmp" double
+-collum "speed" integer
+-collum "defense" integer
+-collum "resistance" integer
+-collum "attack" integer
+-collum "magic" integer
+-collum "mainhandindex" integer
+-collum "offhandindex" integer
+-collum "armorindex" integer
+
+-table "world"
+-collum "id" integer PRIMARY KEY
+-collum "location" string(using format GCS which is 10 characters in length)
+-collum "money" integer
+
+-table inventory
+-collum "id" integer PRIMARY KEY -slot in inventory 0-255
+-collum "item" integer -item template index
+-collum "quantity" integer
+
+\* currently unused
+-table "bprogress"
+-collum "bossid" integer
+-collum "kills" integer
+
+-table "qprogress" 
+-collum "questid" integer
+-collum "complete" bool *\
